@@ -35,7 +35,7 @@ class NewsDetailSerializer(serializers.ModelSerializer):
             mmroot = soup.find("div", {"id": "mm-root"})
             mmroot__main = mmroot.find("main")
             article = mmroot__main.find("article")
-            ic(str(article))
+
             return str(article)
 
         except:
